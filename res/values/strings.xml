@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">GlitterPanel Editor</string>
+
+	<string name="clear">クリア</string>
+	<string name="send">送信</string>
+	<string name="autosync">自動同期</string>
+	<string name="not_connected">グリッターパネルが接続されていません</string>
+
+	<string name="glitter_panel_connected">グリッターパネルが接続されました</string>
+	<string name="glitter_panel_disconnected">グリッターパネルが切断されました</string>
+	<string name="requested_permission">接続権限がないため、ユーザにリクエストしました</string>
+	<string name="grant_permission_request">接続要求が許可されました</string>
+	<string name="reject_permission_request">接続要求がキャンセルされました</string>
+
+	<string-array name="brightness">
+		<item>輝度 25%</item>
+		<item>輝度 50%</item>
+		<item>輝度 75%</item>
+		<item>輝度 100%</item>
+		<item>輝度 ぴかぴか</item>
+	</string-array>
+
+</resources>

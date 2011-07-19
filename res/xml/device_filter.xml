@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- TAKARA Tomy Glitter Panel -->
+	<usb-device vendor-id="3888" product-id="64" />
+</resources>
