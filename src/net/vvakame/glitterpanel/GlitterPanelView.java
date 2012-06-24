@@ -54,11 +54,13 @@ public class GlitterPanelView extends View implements ITag {
 
 	@Override
 	protected void onDraw(Canvas canvas) {
-		int w = getWidth();
-		int h = getHeight();
-		int cw = w / PANEL_WIDTH;
-		int ch = h / PANEL_HEIGHT;
-		canvas.drawRect(0, 0, getWidth(), getHeight(), mFramePaint);
+		final int size = Math.min(getWidth(), getHeight());
+
+		final int w = size / PANEL_WIDTH * PANEL_WIDTH;
+		final int h = size / PANEL_HEIGHT * PANEL_HEIGHT;
+		final int cw = w / PANEL_WIDTH;
+		final int ch = h / PANEL_HEIGHT;
+		canvas.drawRect(0, 0, w - 1, h - 1, mFramePaint);
 		for (int x = 0; x < PANEL_WIDTH; x++) {
 			for (int y = 0; y < PANEL_HEIGHT; y++) {
 				float left = cw * x;
@@ -75,21 +77,13 @@ public class GlitterPanelView extends View implements ITag {
 	}
 
 	@Override
-	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		int min = Math.min(widthMeasureSpec, heightMeasureSpec);
-		int width = min / PANEL_WIDTH * PANEL_WIDTH;
-		int height = min / PANEL_HEIGHT * PANEL_HEIGHT;
-
-		super.onMeasure(width, height);
-	}
-
-	@Override
 	public boolean onTouchEvent(MotionEvent event) {
+		final int size = Math.min(getWidth(), getHeight());
 
-		int w = getWidth();
-		int h = getHeight();
-		int cw = w / PANEL_WIDTH;
-		int ch = h / PANEL_HEIGHT;
+		final int w = size / PANEL_WIDTH * PANEL_WIDTH;
+		final int h = size / PANEL_HEIGHT * PANEL_HEIGHT;
+		final int cw = w / PANEL_WIDTH;
+		final int ch = h / PANEL_HEIGHT;
 
 		float x = event.getX();
 		float y = event.getY();
